@@ -1,0 +1,203 @@
+/* Silent Hill F Colors
+@define-color sh #891B1Aff;
+@define-color sh #6A9097ff;
+@define-color sh #5A7273ff;
+@define-color sh #3E2728ff;
+@define-color sh #1D0C0Fff;
+*/
+
+@define-color sh1 #B0A8A5;
+@define-color sh2 #6A9097;
+@define-color sh3 #5A7273;
+@define-color sh4 #891B1A;
+@define-color sh5 #561D21;
+@define-color sh6 #3E2728;
+
+@import "themes/valkyrieprofile.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: #a37800;
+}
+
+#workspaces button {
+    min-width: 25px;
+
+    margin: 1px 2px;
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    color: @text;
+    background-color: @background-cell;
+    box-shadow: inset 0 -2px @accent;
+
+    transition: 
+        min-width 0.5s, 
+        box-shadow 0.25s,
+        background-color 0.25s
+    ;
+}
+
+#workspaces button.focused, #workspaces button.active {
+    min-width: 50px;
+
+    color: @text;
+    background-color: @background-cell;
+    box-shadow: inset 0 -3px @highlight;
+
+    transition: 
+        min-width 0.5s,
+        box-shadow 0.25s,
+        background-color 0.25s
+    ;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    margin: 1px 2px;
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    color: @text;
+    background-color: @background-cell;
+}
+
+#window,
+#workspaces {
+    margin: 0px 4px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 10px 10px 0px 10px;
+    padding: 1px 1px;
+
+    border-radius: 20px;
+}
+
+.modules-center {
+    background-color: @background;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: white;
+}
+
+#privacy-item.screenshare {
+    background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: #0069d4;
+}
