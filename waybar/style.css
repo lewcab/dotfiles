@@ -68,16 +68,12 @@ button:hover {
 
 #workspaces button {
     min-width: 25px;
-
-    margin: 1px 2px;
+    margin: 4px 2px;
     padding: 5px 12px;
-
     border-radius: 20px;
-
     color: @text;
     background-color: @background-cell;
     box-shadow: inset 0 -2px @accent;
-
     transition: 
         min-width 0.5s, 
         box-shadow 0.25s,
@@ -87,11 +83,10 @@ button:hover {
 
 #workspaces button.focused, #workspaces button.active {
     min-width: 50px;
-
+    margin: 2px 2px;
     color: @text;
     background-color: @background-cell;
     box-shadow: inset 0 -3px @highlight;
-
     transition: 
         min-width 0.5s,
         box-shadow 0.25s,
@@ -125,13 +120,13 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    margin: 1px 2px;
+    min-height: 25px;
+    margin: 4px 2px;
     padding: 5px 12px;
-
     border-radius: 20px;
-
     color: @text;
     background-color: @background-cell;
+    box-shadow: inset 0 -2px @accent;
 }
 
 #window,
@@ -144,7 +139,6 @@ button:hover {
 .modules-right {
     margin: 10px 10px 0px 10px;
     padding: 1px 1px;
-
     border-radius: 20px;
 }
 
