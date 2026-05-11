@@ -1,12 +1,12 @@
 -- https://wiki.hypr.land/Configuring/Start/
 local modules = {
-	"modules.binds",
-	"modules.env",
-	"modules.exec",
-	"modules.input",
-	"modules.layout",
-	"modules.monitors",
-	"modules.theme",
+	"config.binds",
+	"config.display",
+	"config.env",
+	"config.exec",
+	"config.input",
+	"config.layout",
+	"config.theme",
 }
 
 for _, module in ipairs(modules) do

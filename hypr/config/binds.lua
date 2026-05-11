@@ -1,5 +1,5 @@
-require("modules.apps")
-require("modules.paths")
+require("common.apps")
+require("common.paths")
 
 -- https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 local main_mod = "SUPER"
