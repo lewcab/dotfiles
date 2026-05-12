@@ -1,6 +1,6 @@
 # Backend
-command = zsh
-shell-integration = zsh
+command = fish
+shell-integration = fish
 
 # Aesthetics
 theme = TokyoNight Storm
