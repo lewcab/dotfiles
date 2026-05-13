@@ -13,6 +13,10 @@ hl.bind(main_mod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(main_mod .. " + R", hl.dsp.exec_cmd(APPS.menu))
 hl.bind(main_mod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
+-- Reset Applications
+hl.bind(main_mod_shift .. " + O", hl.dsp.exec_cmd("killall -SIGUSR2 " .. APPS.status_bar))
+hl.bind(main_mod_shift .. " + P", hl.dsp.exec_cmd("pkill hyprpaper; sleep 1 && hyprpaper &"))
+
 -- Screenshots
 hl.bind(main_mod_shift .. " + S", hl.dsp.exec_cmd("hyprshot -m region -o " .. PATHS.screenshots))
 hl.bind(main_mod_shift .. " + S", hl.dsp.exec_cmd("hyprshot -m window -o " .. PATHS.screenshots))
