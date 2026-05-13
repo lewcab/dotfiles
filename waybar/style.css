@@ -75,7 +75,8 @@ button:hover {
     background-color: @background-cell;
     box-shadow: inset 0 -2px @accent;
     transition: 
-        min-width 0.5s, 
+        min-width 0.5s,
+        margin 0.2s,
         box-shadow 0.25s,
         background-color 0.25s
     ;
@@ -89,6 +90,7 @@ button:hover {
     box-shadow: inset 0 -3px @highlight;
     transition: 
         min-width 0.5s,
+        margin 0.2s,
         box-shadow 0.25s,
         background-color 0.25s
     ;
