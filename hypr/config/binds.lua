@@ -8,9 +8,9 @@ local main_mod_shift = main_mod .. " + SHIFT"
 hl.bind(main_mod .. " + C", hl.dsp.window.close())
 hl.bind(main_mod .. " + Q", hl.dsp.exec_cmd(APPS.terminal))
 hl.bind(main_mod .. " + W", hl.dsp.exec_cmd(APPS.browser))
+hl.bind(main_mod .. " + R", hl.dsp.exec_cmd(APPS.launcher))
 hl.bind(main_mod .. " + E", hl.dsp.exec_cmd(APPS.file_manager))
 hl.bind(main_mod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(main_mod .. " + R", hl.dsp.exec_cmd(APPS.menu))
 hl.bind(main_mod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
 -- Reset Applications
