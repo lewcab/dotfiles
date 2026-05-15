@@ -19,11 +19,11 @@
     ],
 
     "modules-right": [
+        "tray",
         "mpd",
         "pulseaudio",
         "network",
-        "battery",
-        "tray"
+        "battery"
     ],
 
     // Modules configuration
