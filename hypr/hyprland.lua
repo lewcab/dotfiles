@@ -1,14 +1,10 @@
 -- https://wiki.hypr.land/Configuring/Start/
-local modules = {
-	"config.binds",
-	"config.display",
-	"config.env",
-	"config.exec",
-	"config.input",
-	"config.layout",
-	"config.theme",
-}
+local config_dir = os.getenv("HOME") .. "/.config/hypr/config"
 
-for _, module in ipairs(modules) do
-	require(module)
+for file in io.popen('ls "' .. config_dir .. '"'):lines() do
+	if file:match("%.lua$") then
+		local module = file:gsub("%.lua$", "")
+
+		require("config." .. module)
+	end
 end
